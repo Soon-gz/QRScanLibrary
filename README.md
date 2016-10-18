@@ -2,26 +2,43 @@
 这样的例子虽然已经很多了，不过我在网上浏览了一圈，也没找到几个图库二维码图片识别例子，好的算法识别率才高。这里有一个好点的算法，算法不是我写的，只是作为整理记录，给众多安卓开发者一个方便。demo的UI有点low，不过功能却是实实在在，有需要的朋友可以自定义一些UI界面。我写demo得时候就不费那劲了。
 看看截图功能。
 ![image](https://github.com/SingleShu/QRScanLibrary/raw/master/imagecache/a.jpg)
+
 点击生成二维码，传入一个字符串，生成相应的二维码。
+
 ![image](https://github.com/SingleShu/QRScanLibrary/raw/master/imagecache/b.jpg)
+
 生成二维码返回的是一个bitmap，很好处理，简单实用。点击开始扫描
-![image](https://github.com/SingleShu/QRScanLibrary/raw/c.jpg)
+
+![image](https://github.com/SingleShu/QRScanLibrary/raw/master/imagecache/c.jpg)
+
 进入扫描界面，右上角有两个按钮，一个是打开手机闪光灯，一个是手机相册选取图片解析。
 只要扫描成功，就会有一个回调接口，在回调接口做相应处理。下面的图片是扫描成功和图片解析成功回调的界面。
+
 ![image](https://github.com/SingleShu/QRScanLibrary/raw/master/imagecache/d.jpg)
+
 功能介绍的差不多了，看看代码。首先导入Zxing 的gradle
 //二维码扫描、识别、生成
     compile 'com.google.zxing:core:3.2.1'
 然后在git上下载源码demo，取其中的QRlibrary的文件夹，导入你的项目。
+
 ![image](https://github.com/SingleShu/QRScanLibrary/raw/master/imagecache/e.jpg)
+
 ![image](https://github.com/SingleShu/QRScanLibrary/raw/master/imagecache/f.jpg)
+
 点击确定，然后等待编译就ok了。之后再建立你的项目与QRlibrary的依赖。
+
 ![image](https://github.com/SingleShu/QRScanLibrary/raw/master/imagecache/g.jpg)
+
 ![image](https://github.com/SingleShu/QRScanLibrary/raw/master/imagecache/h.jpg)
+
 选择了Module依赖之后，选择QRlibrary，确定之后等待编译。在你的项目中创建一个类QRScanActivity（这里是创建一个类，而不是Activity，当然也要在application中注册，只是不需要创建xml文件）继承QRCode2ScanActivity,重写以下方法即可。handleDecode是二维码扫描成功回调接口，扫描成功之后在这里写之后的逻辑。
+
 ![image](https://github.com/SingleShu/QRScanLibrary/raw/master/imagecache/i.jpg)
+
 图片解析成功回调的方法，也就是onActivityResult，当然还必须调用解析的方法。
+
 ![image](https://github.com/SingleShu/QRScanLibrary/raw/master/imagecache/j.jpg)
+
 图片解析逻辑单独贴出来
  String[] proj = { MediaStore.Images.Media.DATA };
                     // 获取选中图片的路径
