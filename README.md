@@ -21,23 +21,23 @@
     compile 'com.google.zxing:core:3.2.1'
 然后在git上下载源码demo，取其中的QRlibrary的文件夹，导入你的项目。
 
-![image](https://github.com/SingleShu/QRScanLibrary/raw/master/imagecache/e.jpg)
+![image](https://github.com/SingleShu/QRScanLibrary/raw/master/imagecache/e.png)
 
-![image](https://github.com/SingleShu/QRScanLibrary/raw/master/imagecache/f.jpg)
+![image](https://github.com/SingleShu/QRScanLibrary/raw/master/imagecache/f.png)
 
 点击确定，然后等待编译就ok了。之后再建立你的项目与QRlibrary的依赖。
 
-![image](https://github.com/SingleShu/QRScanLibrary/raw/master/imagecache/g.jpg)
+![image](https://github.com/SingleShu/QRScanLibrary/raw/master/imagecache/g.png)
 
-![image](https://github.com/SingleShu/QRScanLibrary/raw/master/imagecache/h.jpg)
+![image](https://github.com/SingleShu/QRScanLibrary/raw/master/imagecache/h.png)
 
 选择了Module依赖之后，选择QRlibrary，确定之后等待编译。在你的项目中创建一个类QRScanActivity（这里是创建一个类，而不是Activity，当然也要在application中注册，只是不需要创建xml文件）继承QRCode2ScanActivity,重写以下方法即可。handleDecode是二维码扫描成功回调接口，扫描成功之后在这里写之后的逻辑。
 
-![image](https://github.com/SingleShu/QRScanLibrary/raw/master/imagecache/i.jpg)
+![image](https://github.com/SingleShu/QRScanLibrary/raw/master/imagecache/i.png)
 
 图片解析成功回调的方法，也就是onActivityResult，当然还必须调用解析的方法。
 
-![image](https://github.com/SingleShu/QRScanLibrary/raw/master/imagecache/j.jpg)
+![image](https://github.com/SingleShu/QRScanLibrary/raw/master/imagecache/j.png)
 
 图片解析逻辑单独贴出来
  String[] proj = { MediaStore.Images.Media.DATA };
