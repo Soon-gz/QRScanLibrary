@@ -1,4 +1,5 @@
 # QRScanLibrary
+[博客地址文章地址](http://blog.csdn.net/sw5131899/article/details/52848957)
 这样的例子虽然已经很多了，不过我在网上浏览了一圈，也没找到几个图库二维码图片识别例子，好的算法识别率才高。这里有一个好点的算法，算法不是我写的，只是作为整理记录，给众多安卓开发者一个方便。demo的UI有点low，不过功能却是实实在在，有需要的朋友可以自定义一些UI界面。我写demo得时候就不费那劲了。
 看看截图功能。
 ![image](https://github.com/SingleShu/QRScanLibrary/raw/master/imagecache/a.jpg)
@@ -162,4 +163,5 @@ public class QRScanAtivity extends QRCode2ScanActivity {
     }
 }
 二维码生成，扫描还有图片解析，运用就是这些了。具体源码逻辑就不细谈了。我把源码放在git上，有兴趣想要了解是如何实现的朋友，那就自己去看源码吧。
-如果觉得有用请帮给个star,谢谢
+
+#如果觉得有用请帮给个star,谢谢
