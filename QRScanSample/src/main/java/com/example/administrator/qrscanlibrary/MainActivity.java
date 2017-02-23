@@ -7,7 +7,8 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.qrlibrary.qrcode.QRCodeUtil;
+import com.example.qrlibrary.qrcode.utils.PermissionUtils;
+import com.example.qrlibrary.qrcode.utils.QRCodeUtil;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         test = (TextView) findViewById(R.id.test);
         imageView = (ImageView) findViewById(R.id.image1);
+
+        PermissionUtils.getInstance().requestPermission(this);
     }
 
     public void click(View view){

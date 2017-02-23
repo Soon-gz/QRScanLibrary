@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/scan_mask_top"
+        android:layout_above="@+id/capture_crop_position"
+        android:background="@drawable/scan_mask"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/scan_mask_left"
+        android:layout_below="@+id/scan_mask_top"
+        android:layout_toLeftOf="@+id/capture_crop_position"
+        android:background="@drawable/scan_mask"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/scan_mask_right"
+        android:layout_below="@+id/scan_mask_top"
+        android:layout_toRightOf="@+id/capture_crop_position"
+        android:background="@drawable/scan_mask"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/scan_mask_bottom"
+        android:layout_below="@+id/capture_crop_position"
+        android:layout_toRightOf="@+id/scan_mask_left"
+        android:layout_toLeftOf="@+id/scan_mask_right"
+        android:background="@drawable/scan_mask"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/capture_crop_position"
+        android:layout_width="240dp"
+        android:layout_height="240dp"
+        android:layout_below="@+id/capture_mask_top"
+        android:layout_centerInParent="true">
+
+    </RelativeLayout>
+
+</RelativeLayout>

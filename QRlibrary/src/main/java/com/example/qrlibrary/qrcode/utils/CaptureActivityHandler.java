@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.qrlibrary.qrcode;
+package com.example.qrlibrary.qrcode.utils;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -23,6 +23,7 @@ import android.os.Handler;
 import android.os.Message;
 
 import com.example.qrlibrary.R;
+import com.example.qrlibrary.qrcode.activity.BaseQRScanActivity;
 import com.example.qrlibrary.qrcode.camera.CameraManager;
 import com.example.qrlibrary.qrcode.decode.DecodeThread;
 import com.google.zxing.Result;
@@ -35,7 +36,7 @@ import com.google.zxing.Result;
  */
 public class CaptureActivityHandler extends Handler {
 
-	private final QRCode2ScanActivity activity;
+	private final BaseQRScanActivity activity;
 	private final DecodeThread decodeThread;
 	private final CameraManager cameraManager;
 	private State state;
@@ -44,7 +45,7 @@ public class CaptureActivityHandler extends Handler {
 		PREVIEW, SUCCESS, DONE
 	}
 
-	public CaptureActivityHandler(QRCode2ScanActivity activity, CameraManager cameraManager, int decodeMode) {
+	public CaptureActivityHandler(BaseQRScanActivity activity, CameraManager cameraManager, int decodeMode) {
 		this.activity = activity;
 		decodeThread = new DecodeThread(activity, decodeMode);
 		decodeThread.start();

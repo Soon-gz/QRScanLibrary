@@ -55,8 +55,8 @@ public class BitmapDecoder {
 	/**
 	 * 获取解码结果
 	 * 
-	 * @param bitmap
-	 * @return
+	 * @param bitmap bitmap
+	 * @return fanhui
 	 */
 	public Result getRawResult(Bitmap bitmap) {
 		if (bitmap == null) {

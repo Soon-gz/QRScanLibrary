@@ -25,7 +25,7 @@ import android.os.Looper;
 import android.os.Message;
 
 import com.example.qrlibrary.R;
-import com.example.qrlibrary.qrcode.QRCode2ScanActivity;
+import com.example.qrlibrary.qrcode.activity.BaseQRScanActivity;
 import com.google.zxing.BinaryBitmap;
 import com.google.zxing.DecodeHintType;
 import com.google.zxing.MultiFormatReader;
@@ -39,11 +39,11 @@ import java.util.Map;
 
 public class DecodeHandler extends Handler {
 
-	private final QRCode2ScanActivity activity;
+	private final BaseQRScanActivity activity;
 	private final MultiFormatReader multiFormatReader;
 	private boolean running = true;
 
-	public DecodeHandler(QRCode2ScanActivity activity, Map<DecodeHintType, Object> hints) {
+	public DecodeHandler(BaseQRScanActivity activity, Map<DecodeHintType, Object> hints) {
 		multiFormatReader = new MultiFormatReader();
 		multiFormatReader.setHints(hints);
 		this.activity = activity;

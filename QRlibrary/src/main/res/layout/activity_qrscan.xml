@@ -9,6 +9,7 @@
         android:layout_height="match_parent" />
 
     <RelativeLayout
+        android:id="@+id/capture_title_rl"
         android:layout_width="match_parent"
         android:background="#00F"
         android:layout_height="48dp">
@@ -19,9 +20,10 @@
             android:layout_height="28dp"
             android:layout_centerVertical="true"
             android:layout_marginLeft="10dp"
-            android:src="@drawable/ic_return"/>
+            android:src="@drawable/actionbar_back_nor"/>
 
         <TextView
+            android:id="@+id/capture_title_content_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="#fff"
@@ -104,6 +106,7 @@
             android:background="@drawable/scan_mask" />
 
         <TextView
+            android:id="@+id/content_hint"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/capture_crop_view"

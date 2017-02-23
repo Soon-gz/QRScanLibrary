@@ -1,4 +1,4 @@
-package com.example.qrlibrary.qrcode;
+package com.example.qrlibrary.qrcode.utils;
 
 import android.graphics.Bitmap;
 
@@ -17,9 +17,9 @@ import java.util.Hashtable;
 public class QRCodeUtil {
     /**
      * 将指定的内容生成成二维码
-     * <p/>
-     * 将要生成二维码的内容
      *
+     * 将要生成二维码的内容
+     * @param str 传入字符串
      * @return 返回生成好的二维码事件
      */
     public static Bitmap CreateTwoDCode(String str) {

@@ -163,8 +163,9 @@ public class CameraManager {
 	}
 	
 	/**
-	 * Convenience method for
-	 */
+	 * 	Convenience method for
+	 * @param newSetting new String
+     */
 	public synchronized void setTorch(boolean newSetting) {
 		if (newSetting != configManager.getTorchState(camera)) {
 			if (camera != null) {
@@ -212,7 +213,7 @@ public class CameraManager {
 	/**
 	 * 获取相机分辨率
 	 * 
-	 * @return
+	 * @return 返回指标
 	 */
 	public Point getCameraResolution() {
 		return configManager.getCameraResolution();

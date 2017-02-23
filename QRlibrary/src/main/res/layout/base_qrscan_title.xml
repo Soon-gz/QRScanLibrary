@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:id="@+id/default_title_rl"
+        android:layout_width="match_parent"
+        android:background="#2bbbe6"
+        android:layout_height="48dp">
+
+        <ImageView
+            android:id="@+id/capture_scan_back_iv"
+            android:layout_width="20dp"
+            android:layout_height="28dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/actionbar_back_select_style"/>
+
+        <TextView
+            android:id="@+id/capture_title_content_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#fff"
+            android:layout_centerInParent="true"
+            android:textSize="20sp"
+            android:text="扫一扫"/>
+        <ImageView
+            android:id="@+id/capture_flashlight"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:padding="6dp"
+            android:src="@drawable/scan_flashlight"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="40dp"
+            android:textColor="@android:color/white" />
+
+        <ImageView
+            android:id="@+id/capture_scan_photo"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:layout_width="40dp"
+            android:padding="6dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/scan_photo"
+            android:textColor="@android:color/white" />
+    </RelativeLayout>
+</LinearLayout>

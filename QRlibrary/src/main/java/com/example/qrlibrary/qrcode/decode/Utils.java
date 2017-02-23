@@ -35,6 +35,7 @@ public class Utils {
 	 * @param uri
 	 *            The Uri to query.
 	 * @author paulburke
+	 * @return String
 	 */
 	public static String getPath(final Context context, final Uri uri) {
 

@@ -1,4 +1,5 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.novoda.bintray-release'
 
 android {
     compileSdkVersion 24
@@ -19,6 +20,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
 }
 
 dependencies {
@@ -30,4 +32,23 @@ dependencies {
     testCompile 'junit:junit:4.12'
     //二维码扫描、识别、生成
     compile 'com.google.zxing:core:3.2.1'
+
+}
+
+publish {
+    userOrg = 'singleshu8'//bintray.com用户名
+    groupId = 'com.singleshu'//jecnter上的路径
+    artifactId = 'ZxingPlus'//项目名称
+    publishVersion = '1.1.0'//版本号
+    desc = '使用简单描述：1.导入gradle。2.继承DefaultQRScanActivity，重写方法，有扫描成功和图片解析成功回调 3. 可以完全自定义界面，继承baseQRScanActivity'//描述
+    website = 'https://github.com/SingleShu/QRScanLibrary'//网址
+}
+
+allprojects {
+    tasks.withType(Javadoc) {
+        options {
+            encoding "UTF-8"
+            charSet "UTF-8"
+        }
+    }
 }

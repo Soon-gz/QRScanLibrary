@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.qrlibrary.qrcode;
+package com.example.qrlibrary.qrcode.utils;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;

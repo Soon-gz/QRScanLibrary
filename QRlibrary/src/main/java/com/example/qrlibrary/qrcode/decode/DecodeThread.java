@@ -19,7 +19,7 @@ package com.example.qrlibrary.qrcode.decode;
 import android.os.Handler;
 import android.os.Looper;
 
-import com.example.qrlibrary.qrcode.QRCode2ScanActivity;
+import com.example.qrlibrary.qrcode.activity.BaseQRScanActivity;
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.DecodeHintType;
 
@@ -43,12 +43,12 @@ public class DecodeThread extends Thread {
 	public static final int QRCODE_MODE = 0X200;
 	public static final int ALL_MODE = 0X300;
 
-	private final QRCode2ScanActivity activity;
+	private final BaseQRScanActivity activity;
 	private final Map<DecodeHintType, Object> hints;
 	private Handler handler;
 	private final CountDownLatch handlerInitLatch;
 
-	public DecodeThread(QRCode2ScanActivity activity, int decodeMode) {
+	public DecodeThread(BaseQRScanActivity activity, int decodeMode) {
 
 		this.activity = activity;
 		handlerInitLatch = new CountDownLatch(1);
